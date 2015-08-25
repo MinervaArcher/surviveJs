@@ -1,0 +1,20 @@
+{
+  "name": "survive-js",
+  "version": "1.0.0",
+  "description": "My attempt to learn React + Webpack with Survive.js tutorial.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Minerva Archer",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.16.0",
+    "html-webpack-plugin": "^1.6.1",
+    "node-libs-browser": "^0.5.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.12.0",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
