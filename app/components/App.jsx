@@ -2,7 +2,9 @@ import React from 'react';
 import Notes from './Notes.jsx';
 import NoteActions from '../actions/NoteActions';
 import NoteStore from '../stores/NoteStore';
+import connect from '../decorators/connect';
 
+@connect(NoteStore)
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +22,7 @@ export default class App extends React.Component {
     this.setState(state);
   }
   render() {
-    const notes = this.state.notes;
+    const notes = this.props.notes;
 
     return (
       <div>
