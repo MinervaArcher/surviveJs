@@ -7,7 +7,10 @@ class NoteStore {
     this.bindActions(NoteActions);
 
     this.notes = this.notes || [];
-    this.dispatcher.register(console.log.bind(console));
+
+    this.exportPublicMethods({
+      get: this.get.bind(this)
+    });
   }
   create(note) {
     const notes = this.notes;
@@ -51,6 +54,16 @@ class NoteStore {
     }
 
     return noteIndex;
+  }
+  get(ids) {
+    const notes = this.notes || [];
+    const notesIds = notes.map((note) => note.id);
+
+    if(ids) {
+      return ids.map((id) => notes[notesIds.indexOf(id)]);
+    }
+
+    return [];
   }
 }
 
