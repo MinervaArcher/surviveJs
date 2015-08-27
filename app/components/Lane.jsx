@@ -36,7 +36,7 @@ export default class Lane extends React.Component {
           <Editable className='lane-name' value={name}
             onEdit={this.editName.bind(null, id)} />
           <div className='lane-add-note'>
-            <button onClick={this.addNote.bind(null, id)}>+</button>
+            <button className='add-item' onClick={this.addNote.bind(null, id)}>+</button>
           </div>
         </div>
         <AltContainer

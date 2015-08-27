@@ -38,8 +38,8 @@ export default class Editable extends React.Component {
 
     return (
       <div onClick={this.edit}>
-        <span className='value'>{this.props.value}</span>
         {onDelete ? this.renderDelete() : null }
+        <span className='value'>{this.props.value}</span>
       </div>
     );
   }

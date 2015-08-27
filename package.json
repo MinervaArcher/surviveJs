@@ -12,7 +12,7 @@
     "lint-css": "csslint app/stylesheets --quiet"
   },
   "author": "Minerva Archer",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^5.8.22",
     "babel-eslint": "^4.1.0",
@@ -39,5 +39,9 @@
     "node-uuid": "^1.4.3",
     "react": "^0.13.3",
     "react-dnd": "^1.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MinervaArcher/surviveJs.git"
   }
 }
