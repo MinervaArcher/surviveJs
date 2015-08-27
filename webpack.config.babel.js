@@ -25,6 +25,17 @@ if(TARGET === 'start' || !TARGET) {
   module.exports = merge(common, {
     devtool: 'eval-source-map',
     module: {
+      preLoaders: [
+        {
+          test: /\.css$/,
+          loader: 'csslint'
+        },
+        {
+          test: /\.jsx?$/,
+          loader: 'eslint-loader',
+          include: path.resolve(ROOT_PATH, 'app')
+        }
+      ],
       loaders: [
         {
           test: /\.css$/,
